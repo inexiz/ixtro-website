@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | ixtro</title>
+  <meta name="description" content="AI Security research, sandbox escapes, and reverse engineering.">
+  <meta name="author" content="ixtro">
+  <meta property="og:title" content="Projects | ixtro">
+  <meta property="og:description" content="AI Security research, sandbox escapes, and reverse engineering.">
+  <meta name="theme-color" content="#09090b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">ixtro<span class="logo-dot">.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="about.html">About</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <main class="container page-content">
+    <!-- Page Header -->
+    <header class="page-header reveal">
+      <h1 class="page-title">Research & Projects</h1>
+      <p class="page-description">Deep dives into AI model security, code execution subversion, and sandbox escapes.</p>
+    </header>
+
+    <!-- Public Projects Container (Admin panel handles hidden ones) -->
+    <div id="projects-container">
+      <!-- AI Security -->
+      <div class="category-label reveal">AI Security</div>
+
+      <div class="card-grid">
+        <div class="card card-featured reveal reveal-delay-1">
+          <div class="card-tags">
+            <span class="tag">AI Security</span>
+            <span class="tag">LLM</span>
+            <span class="status-badge status-active">Case Study</span>
+          </div>
+          <h3 class="card-title">Amnesia in AI Systems</h3>
+          <p class="card-description">
+            A comprehensive study case analyzing context destruction vulnerabilities in leading AI models like ChatGPT and Gemini. Exposing how malicious injections can induce temporary amnesia patterns in large language models.
+          </p>
+          <span class="card-link" style="opacity:0.5">Report coming soon...</span>
+        </div>
+
+        <div class="card card-featured reveal reveal-delay-2">
+          <div class="card-tags">
+            <span class="tag">Reverse Engineering</span>
+            <span class="tag">Sandbox Escape</span>
+            <span class="status-badge status-active">Active</span>
+          </div>
+          <h3 class="card-title">Meta Sandbox Subversion</h3>
+          <p class="card-description">
+            Compromising meta systems AI through advanced code execution tactics. Reversing internal binary implementations to manipulate model permissions, resulting in confirmed sandbox escapes.
+          </p>
+          <span class="card-link" style="opacity:0.5">Exploit hidden. Ongoing research.</span>
+        </div>
+      </div>
+
+      <!-- Published Work -->
+      <div class="category-label reveal">Writeups</div>
+
+      <div class="card-grid">
+        <div class="card reveal">
+          <div class="card-tags">
+            <span class="tag">Steganography</span>
+            <span class="tag">Exploitation</span>
+          </div>
+          <h3 class="card-title">Deputy Confusion via Steganography</h3>
+          <p class="card-description">
+            An upcoming writeup on embedding exploit payloads within benign media formats to exploit confused deputies across API boundaries.
+          </p>
+          <span class="card-link">Coming soon</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <div class="footer-copyright">© 2026 ixtro. All rights reserved.</div>
+        <div class="footer-social">
+          <a href="https://x.com/ixtrooo" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- Load dynamic content if any -->
+  <script src="content-loader.js"></script>
+</body>
+</html>

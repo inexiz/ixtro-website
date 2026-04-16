@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | ixtro</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#09090b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    /* Prevent raw content from showing before auth check */
+    body { display: none; }
+    body.auth-checked { display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- Login Section -->
+  <div id="login-view" class="admin-login" style="display: none;">
+    <div class="login-card">
+      <div class="logo-icon">🕵️‍♀️</div>
+      <h1>ixtro's Board</h1>
+      <p>Terminal Access Required</p>
+      
+      <form id="login-form">
+        <div class="form-group">
+          <input type="password" id="admin-password" class="admin-input" placeholder="Enter override sequence..." autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Authenticate</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard -->
+  <div id="dashboard-view" class="admin-layout" style="display: none;">
+    <header class="admin-header">
+      <h1>Dashboard <span style="color: var(--accent); font-weight: 300;">// IXTRO</span></h1>
+      <button id="btn-logout" class="btn btn-secondary btn-sm">Logout</button>
+    </header>
+
+    <div class="admin-tabs">
+      <button class="admin-tab active" data-tab="blogs">Blog Drafts</button>
+      <button class="admin-tab" data-tab="projects">Projects</button>
+    </div>
+
+    <!-- Blogs Tab -->
+    <div id="tab-blogs" class="tab-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xl);">
+        <h2>Private Writeups</h2>
+        <button class="btn btn-primary btn-sm" onclick="openEditor('blog')">+ New Draft</button>
+      </div>
+      
+      <div id="admin-blog-list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Projects Tab -->
+    <div id="tab-projects" class="tab-content" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-xl);">
+        <h2>Research Tracking</h2>
+        <button class="btn btn-primary btn-sm" onclick="openEditor('project')">+ New Project</button>
+      </div>
+      
+      <div id="admin-project-list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Editor Modal -->
+  <div id="editor-modal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Edit Entry</h2>
+        <button class="modal-close" onclick="closeEditor()">×</button>
+      </div>
+      <form id="editor-form">
+        <input type="hidden" id="entry-id">
+        <input type="hidden" id="entry-type">
+        
+        <div class="form-group">
+          <label class="admin-label">Title</label>
+          <input type="text" id="entry-title" class="admin-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="admin-label">Tags (comma separated)</label>
+          <input type="text" id="entry-tags" class="admin-input" placeholder="e.g. Reverse Engineering, AI Security">
+        </div>
+        
+        <div class="form-group">
+          <label class="admin-label">Status</label>
+          <select id="entry-status" class="admin-select">
+            <option value="draft">Draft (Hidden)</option>
+            <option value="published">Published (Public)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label class="admin-label">Content / Description</label>
+          <textarea id="entry-content" class="admin-textarea" required></textarea>
+        </div>
+        
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" onclick="closeEditor()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

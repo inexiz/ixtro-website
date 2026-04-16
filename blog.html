@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | ixtro</title>
+  <meta name="description" content="Thoughts, writeups, and research by ixtro.">
+  <meta name="author" content="ixtro">
+  <meta property="og:title" content="Blog | ixtro">
+  <meta property="og:description" content="Thoughts, writeups, and research by ixtro.">
+  <meta name="theme-color" content="#09090b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">ixtro<span class="logo-dot">.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <main class="container page-content">
+    <!-- Page Header -->
+    <header class="page-header reveal">
+      <h1 class="page-title">Blog</h1>
+      <p class="page-description">Writeups, research notes, and unfiltered thoughts on breaking things.</p>
+    </header>
+
+    <!-- Dynamic Blog Posts Container -->
+    <div id="blog-container" class="card-grid">
+      
+      <!-- Hardcoded hints -->
+      <div class="hint-card reveal">
+        <h3 class="post-title">Steganography & The Confused Deputy</h3>
+        <p class="post-excerpt">
+          Exploring advanced payload delivery mechanisms inside images bypassing modern WAFs, leading to confused deputy privilege escalation.
+        </p>
+        <div class="hint-teaser">Writing in progress...</div>
+      </div>
+
+      <div class="hint-card reveal reveal-delay-1">
+        <h3 class="post-title">Amnesia Inducement in LLMs</h3>
+        <p class="post-excerpt">
+          Analyzing how ChatGPT and Gemini handle context overflow. A deep dive into forcing models to forget guardrails and system prompts.
+        </p>
+        <div class="hint-teaser">Drafting...</div>
+      </div>
+
+      <div class="hint-card reveal reveal-delay-2">
+        <h3 class="post-title">Meta Sandbox Escape: Reversing the Binary</h3>
+        <p class="post-excerpt">
+          My journey reversing custom code execution binaries in meta AI environments to gain host access.
+        </p>
+        <div class="hint-teaser">Reviewing NDA...</div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <div class="footer-copyright">© 2026 ixtro. All rights reserved.</div>
+        <div class="footer-social">
+          <a href="https://x.com/ixtrooo" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="content-loader.js"></script>
+</body>
+</html>

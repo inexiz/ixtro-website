@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ixtro — Cybersecurity Researcher</title>
+  <meta name="description" content="Cybersecurity researcher, penetration tester, and AI security specialist.">
+  <meta name="author" content="ixtro">
+  <meta property="og:title" content="ixtro — Cybersecurity Researcher">
+  <meta property="og:description" content="Cybersecurity researcher, penetration tester, and AI security specialist.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#09090b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">ixtro<span class="logo-dot">.</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="active">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <div class="glow-orb-bottom"></div>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <h1 class="hero-greeting reveal">
+        Hello <span class="wave">👋</span>
+      </h1>
+      <p class="hero-tagline reveal reveal-delay-1">
+        <span class="highlight">Cybersecurity Researcher</span> / AI Systems Security / Reverse Engineer
+      </p>
+      <p class="hero-bio reveal reveal-delay-2">
+        I dive deep into the binary, breaking AI systems and exploiting sandbox escapes to force large models to spill their secrets. Penetration testing the future of artificial intelligence.
+      </p>
+      <a href="mailto:inexiz@protonmail.com" class="hero-cta reveal reveal-delay-3">
+        Contact <span class="arrow">→</span>
+      </a>
+
+      <div class="mottos reveal reveal-delay-4">
+        <p class="motto">
+          Nascentes morimur
+          <span class="motto-translation">"From the moment we are born, we begin to die."</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section reveal" id="blog-section">
+      <div class="section-header">
+        <h2 class="section-title">Blog</h2>
+        <p class="section-subtitle">Upcoming writeups on advanced exploitation and steganography.</p>
+        <a href="blog.html" class="section-link">View Board <span>→</span></a>
+      </div>
+
+      <div class="card-grid">
+        <div class="hint-card reveal reveal-delay-1">
+          <h3 class="post-title">Subverting AI: Amnesia Case Studies</h3>
+          <p class="post-excerpt">How leading models like ChatGPT and Gemini handle context destruction and memory poisoning.</p>
+          <div class="hint-teaser">Drafting in progress...</div>
+        </div>
+
+        <div class="hint-card reveal reveal-delay-2">
+          <h3 class="post-title">Steganography & Deputy Confusion</h3>
+          <p class="post-excerpt">Hiding malicious payloads in plain sight and exploiting confused deputies in modern architectures.</p>
+          <div class="hint-teaser">Researching...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section reveal" id="projects-section">
+      <div class="section-header">
+        <h2 class="section-title">Projects & Research</h2>
+        <p class="section-subtitle">Deep dives into AI model security, code execution subversion, and sandbox escapes.</p>
+        <a href="projects.html" class="section-link">View All Work <span>→</span></a>
+      </div>
+
+      <div class="card-grid">
+        <div class="card card-featured reveal reveal-delay-1">
+          <div class="card-tags">
+            <span class="tag">AI Security</span>
+            <span class="tag">LLM</span>
+            <span class="status-badge status-active">Active</span>
+          </div>
+          <h3 class="card-title">Project Amnesia</h3>
+          <p class="card-description">A comprehensive study case in AI systems security across leading LLMs (ChatGPT, Gemini). Focuses on context window manipulation, prompt injection, and memory amnesia triggers.</p>
+          <a href="projects.html" class="card-link">Explore <span>→</span></a>
+        </div>
+
+        <div class="card reveal reveal-delay-2">
+          <div class="card-tags">
+            <span class="tag">Binary Exp</span>
+            <span class="tag">Reverse Engineering</span>
+          </div>
+          <h3 class="card-title">MetaSandbox Bypass</h3>
+          <p class="card-description">Hacking meta AI systems using custom code execution tools to reverse compiled binary payloads, granting sandbox escapes and system-level compromise.</p>
+          <a href="projects.html" class="card-link">Explore <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section reveal" id="contact-section">
+      <div class="section-header">
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:inexiz@protonmail.com" class="contact-item reveal reveal-delay-1">
+          <div class="contact-icon">✉</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">inexiz@protonmail.com</div>
+          </div>
+        </a>
+        <a href="https://x.com/ixtrooo" target="_blank" rel="noopener" class="contact-item reveal reveal-delay-2">
+          <div class="contact-icon">𝕏</div>
+          <div>
+            <div class="contact-label">X</div>
+            <div class="contact-value">@ixtrooo</div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <div class="footer-copyright">© 2026 ixtro. All rights reserved.</div>
+        <div class="footer-social">
+          <a href="https://x.com/ixtrooo" target="_blank" rel="noopener">X</a>
+          <!-- Hidden Admin Link -->
+          <a href="admin.html" style="opacity: 0.1; position: absolute; right: 0; bottom: 0; width: 20px; height: 20px; text-decoration: none; color: transparent;">π</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
